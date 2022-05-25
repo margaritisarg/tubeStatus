@@ -6,7 +6,7 @@ def tube_status():
     page = requests.get('https://tfl.gov.uk/tube-dlr-overground/status')
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    tube_list = ['bakerloo', 'jubilee', 'metropolitan', 'central']
+    tube_list = ['bakerloo', 'jubilee', 'metropolitan', 'central', 'victoria', 'elizabeth-line']
     tube_dictionary = {}
     soupBase = soup.find("div", {"class": "service-status-rainbow-board board-wrapper"})
     message = ''
